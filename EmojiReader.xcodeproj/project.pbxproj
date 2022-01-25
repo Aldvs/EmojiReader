@@ -56,15 +56,47 @@
 		847A110127A0715B0099B6CC /* EmojiReader */ = {
 			isa = PBXGroup;
 			children = (
-				847A110227A0715B0099B6CC /* AppDelegate.swift */,
-				847A110427A0715B0099B6CC /* SceneDelegate.swift */,
-				847A110627A0715B0099B6CC /* ViewController.swift */,
-				847A110827A0715B0099B6CC /* Main.storyboard */,
-				847A110B27A071600099B6CC /* Assets.xcassets */,
-				847A110D27A071600099B6CC /* LaunchScreen.storyboard */,
-				847A111027A071600099B6CC /* Info.plist */,
+				847A111627A072560099B6CC /* SupportFiles */,
+				847A111927A072830099B6CC /* ViewControllers */,
+				847A111727A072660099B6CC /* StoryBoards */,
+				847A111827A072710099B6CC /* Resources */,
 			);
 			path = EmojiReader;
+			sourceTree = "<group>";
+		};
+		847A111627A072560099B6CC /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				847A110227A0715B0099B6CC /* AppDelegate.swift */,
+				847A110427A0715B0099B6CC /* SceneDelegate.swift */,
+				847A111027A071600099B6CC /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		847A111727A072660099B6CC /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				847A110827A0715B0099B6CC /* Main.storyboard */,
+				847A110D27A071600099B6CC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		847A111827A072710099B6CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847A110B27A071600099B6CC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		847A111927A072830099B6CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				847A110627A0715B0099B6CC /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmojiReader/Info.plist;
+				INFOPLIST_FILE = EmojiReader/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmojiReader/Info.plist;
+				INFOPLIST_FILE = EmojiReader/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
