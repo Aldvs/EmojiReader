@@ -13,6 +13,7 @@
 		847A110C27A071600099B6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A110B27A071600099B6CC /* Assets.xcassets */; };
 		847A110F27A071600099B6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847A110D27A071600099B6CC /* LaunchScreen.storyboard */; };
 		847A111B27A0754E0099B6CC /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A111A27A0754E0099B6CC /* EmojiTableViewController.swift */; };
+		847A111D27A082700099B6CC /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A111C27A082700099B6CC /* EmojiTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		847A110E27A071600099B6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847A111027A071600099B6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847A111A27A0754E0099B6CC /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
+		847A111C27A082700099B6CC /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				847A111A27A0754E0099B6CC /* EmojiTableViewController.swift */,
+				847A111C27A082700099B6CC /* EmojiTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				847A111B27A0754E0099B6CC /* EmojiTableViewController.swift in Sources */,
 				847A110327A0715B0099B6CC /* AppDelegate.swift in Sources */,
+				847A111D27A082700099B6CC /* EmojiTableViewCell.swift in Sources */,
 				847A110527A0715B0099B6CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
