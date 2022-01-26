@@ -17,24 +17,26 @@ class EmojiTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.title = "Emoji Reader"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveSegue" else { return }
+        let sourceVC = segue.source as! NewEmojiTableViewController
+        let emoji = sourceVC.emoji
+        
+        let newIndexPath = IndexPath(row: objects.count, section: 0)
+        objects.append(emoji)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
+    }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return objects.count
     }
 
@@ -46,6 +48,7 @@ class EmojiTableViewController: UITableViewController {
 
         return cell
     }
+    
     //MARK: - Editing Cells Methods
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
