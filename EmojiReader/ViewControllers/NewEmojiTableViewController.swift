@@ -9,22 +9,29 @@ import UIKit
 
 class NewEmojiTableViewController: UITableViewController {
     
-    var emoji = Emoji(emoji: "", name: "", description: "", isFavorite: false)
-
+    //MARK: - IB Outlets
     @IBOutlet weak var emojiTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    //MARK: - Public Properties
+    var emoji = Emoji(emoji: "", name: "", description: "", isFavorite: false)
+    
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
         updateSaveButtonState()
-
     }
     
+    //MARK: - IB Actions
+    @IBAction func textChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+    
+    //MARK: - Private Methods
     private func updateSaveButtonState() {
         let emojiText = emojiTextField.text ?? ""
         let nameText = nameTextField.text ?? ""
@@ -39,10 +46,8 @@ class NewEmojiTableViewController: UITableViewController {
         descriptionTextField.text = emoji.description
     }
     
-    @IBAction func textChanged(_ sender: UITextField) {
-        updateSaveButtonState()
-    }
-    
+ 
+    //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard segue.identifier == "saveSegue" else { return }
@@ -54,7 +59,4 @@ class NewEmojiTableViewController: UITableViewController {
         self.emoji = Emoji(emoji: emoji, name: name, description: description, isFavorite: self.emoji.isFavorite)
         
     }
-
-    // MARK: - Table view data source
-
 }

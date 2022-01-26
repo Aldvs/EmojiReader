@@ -9,18 +9,21 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
+    //MARK: - Public Properties
     var objects = [
         Emoji(emoji: "🥰", name: "Love", description: "Let's love each other", isFavorite: false),
         Emoji(emoji: "🤔", name: "Hmmm", description: "What is that?", isFavorite: false),
         Emoji(emoji: "🥳", name: "HappyB", description: "Let's celebrate", isFavorite: false)
     ]
-
+    
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Emoji Reader"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
+    //MARK: - Navigation Methods
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveSegue" else { return }
         let sourceVC = segue.source as! NewEmojiTableViewController
@@ -118,6 +121,4 @@ class EmojiTableViewController: UITableViewController {
         action.image = object.isFavorite ? UIImage(systemName: "heart") : UIImage(systemName: "heart.slash")
         return action
     }
-
-
 }
